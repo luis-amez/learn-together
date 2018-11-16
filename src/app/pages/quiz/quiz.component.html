@@ -1,3 +1,8 @@
 <p>
-  Here there will be an interesting question!
+  {{question?.question}}
 </p>
+<ul>
+  <li *ngFor="let option of question?.options">
+    {{option}}
+  </li>
+</ul>
