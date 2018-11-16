@@ -8,7 +8,7 @@ export class QuizService {
 
   constructor(private httpClient: HttpClient) { }
 
-  getQuestions() {
+  getQuestions(): Promise<Object> {
     return this.httpClient.get('http://localhost:3000/question').toPromise();
   }
 }
