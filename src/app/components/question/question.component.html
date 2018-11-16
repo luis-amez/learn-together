@@ -2,7 +2,7 @@
   {{question?.question}}
 </p>
 <ul>
-  <li *ngFor="let option of question?.options">
+  <li *ngFor="let option of question?.options" (click)="onOptionClicked(option)" [className]="isOptionClicked(option)">
     {{option}}
   </li>
 </ul>

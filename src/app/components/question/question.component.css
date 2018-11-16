@@ -1,0 +1,15 @@
+.default-answer {
+  color: black;
+}
+
+.right-answer {
+  color: green;
+}
+
+.wrong-answer {
+  color: red;
+}
+
+.active {
+  color: orange;
+}
