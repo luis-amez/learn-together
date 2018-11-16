@@ -21,7 +21,6 @@ export class QuizComponent implements OnInit {
     this.quizService.getQuestions()
       .then(data => {
         this.question = data;
-        console.log(this.question);
       });
   }
 

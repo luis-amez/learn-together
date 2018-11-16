@@ -1,8 +1,1 @@
-<p>
-  {{question?.question}}
-</p>
-<ul>
-  <li *ngFor="let option of question?.options">
-    {{option}}
-  </li>
-</ul>
+<app-question [question]="question"></app-question>

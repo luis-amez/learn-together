@@ -7,11 +7,13 @@ import { AppComponent } from './app.component';
 import { QuizComponent } from './pages/quiz/quiz.component';
 
 import { QuizService } from './services/quiz.service';
+import { QuestionComponent } from './components/question/question.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    QuizComponent
+    QuizComponent,
+    QuestionComponent
   ],
   imports: [
     BrowserModule,
