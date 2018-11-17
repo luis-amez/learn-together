@@ -1,20 +1,25 @@
-import { Component, OnInit } from '@angular/core';
-import { Input } from '@angular/core';
+import { Component, OnInit, OnChanges, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-question',
   templateUrl: './question.component.html',
   styleUrls: ['./question.component.css']
 })
-export class QuestionComponent implements OnInit {
+export class QuestionComponent implements OnInit, OnChanges {
 
   @Input() question: any;
+  @Output() selected = new EventEmitter<boolean>();
   style = 'default';
   currentOption: string;
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  ngOnChanges() {
+    this.style = 'default';
+    this.currentOption = '';
   }
 
   onOptionClicked(option: string): void {
@@ -24,8 +29,10 @@ export class QuestionComponent implements OnInit {
     this.currentOption = option;
     if (option === this.question.correctAnswer) {
       this.style = 'right-answer';
+      this.selected.emit(true);
     } else {
       this.style = 'wrong-answer';
+      this.selected.emit(false);
     }
   }
 

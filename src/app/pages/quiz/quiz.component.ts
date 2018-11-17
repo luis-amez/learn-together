@@ -9,7 +9,10 @@ import { QuizService } from '../../services/quiz.service';
 })
 export class QuizComponent implements OnInit {
 
-  question: Object;
+  questions: Array<any>;
+  question: any;
+  index = 0;
+  score = 0;
 
   constructor(private quizService: QuizService) { }
 
@@ -20,8 +23,20 @@ export class QuizComponent implements OnInit {
   getQuestions(): void {
     this.quizService.getQuestions()
       .then(data => {
-        this.question = data;
+        this.questions = data;
+        this.question = this.questions[0];
       });
   }
 
+  onSelected(rightAsnwer: boolean) {
+    if (rightAsnwer) {
+      this.score++;
+    }
+    setTimeout(this.nextQuestion.bind(this), 2000);
+  }
+
+  nextQuestion(): void {
+    this.index++;
+    this.question = this.questions[this.index];
+  }
 }
