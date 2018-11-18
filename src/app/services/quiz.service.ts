@@ -11,6 +11,7 @@ export class QuizService {
   constructor(private httpClient: HttpClient) { }
 
   getQuestions(): Promise<any> {
-    return this.httpClient.get(`${environment.apiUrl}/question`).toPromise();
+    return this.httpClient.get(`${environment.apiUrl}/questions`)
+      .toPromise();
   }
 }

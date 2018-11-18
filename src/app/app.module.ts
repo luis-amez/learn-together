@@ -7,7 +7,6 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { QuizComponent } from './pages/quiz/quiz.component';
 
-import { QuizService } from './services/quiz.service';
 import { QuestionComponent } from './components/question/question.component';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
 
@@ -24,9 +23,7 @@ import { LoginPageComponent } from './pages/login-page/login-page.component';
     HttpClientModule,
     FormsModule
   ],
-  providers: [
-    QuizService
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
