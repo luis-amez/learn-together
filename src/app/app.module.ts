@@ -9,13 +9,15 @@ import { QuizComponent } from './pages/quiz/quiz.component';
 
 import { QuestionComponent } from './components/question/question.component';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
+import { ChirpPageComponent } from './pages/chirp-page/chirp-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     QuizComponent,
     QuestionComponent,
-    LoginPageComponent
+    LoginPageComponent,
+    ChirpPageComponent
   ],
   imports: [
     BrowserModule,

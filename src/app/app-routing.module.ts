@@ -6,10 +6,12 @@ import { NotLoggedGuard } from './guards/not-logged.guard';
 
 import { QuizComponent } from './pages/quiz/quiz.component';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
+import { ChirpPageComponent } from './pages/chirp-page/chirp-page.component';
 
 const routes: Routes = [
-  { path: '',  component: QuizComponent, canActivate: [ IsLoggedGuard ] },
   { path: 'login',  component: LoginPageComponent, canActivate: [ NotLoggedGuard ] },
+  { path: '',  component: QuizComponent, canActivate: [ IsLoggedGuard ] },
+  { path: 'chirp',  component: ChirpPageComponent, canActivate: [ IsLoggedGuard ] },
   { path: '**', redirectTo: '' }
 ];
 
