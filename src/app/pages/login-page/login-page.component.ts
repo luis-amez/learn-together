@@ -31,9 +31,6 @@ export class LoginPageComponent implements OnInit {
       this.processing = true;
       this.authService.login({username: this.username, password: this.password})
         .then((result) => {
-          // ... handle result, reset form, etc...
-          // ... navigate with this.router.navigate(['...'])
-          // ... maybe turn this to false if your're staying on the page - this.processing = false;
           this.router.navigate(['/']);
         })
         .catch((err) => {
