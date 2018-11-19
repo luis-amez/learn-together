@@ -22,7 +22,7 @@ export class ChirpService {
     const options = {
       withCredentials: true
     };
-    return this.httpClient.post(`${environment.apiUrl}/auth/signup`, chirp, options)
+    return this.httpClient.post(`${environment.apiUrl}/chirps`, chirp, options)
       .toPromise();
   }
 }
