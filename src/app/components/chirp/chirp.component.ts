@@ -10,16 +10,18 @@ import { ChirpService } from '../../services/chirp.service';
 export class ChirpComponent implements OnInit {
 
   @Input() chirp: any;
+  sharesLength: number;
 
   constructor(private chirpService: ChirpService) { }
 
   ngOnInit() {
+    this.sharesLength = this.chirp.shares.length;
   }
 
   shareChirp() {
     this.chirpService.shareChirp(this.chirp._id)
       .then(data => {
-        // Update display
+        this.sharesLength = data.shares.length;
       });
   }
 }

@@ -1,4 +1,4 @@
 <p>{{chirp.content}}</p>
 <p>{{chirp.author.username}}</p>
 <p>{{ chirp.createdAt | date:'medium' }}</p>
-<button (click)="shareChirp()">Share</button>
+<button (click)="shareChirp()">Share ({{sharesLength}})</button>
