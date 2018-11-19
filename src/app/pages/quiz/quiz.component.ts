@@ -13,6 +13,7 @@ export class QuizComponent implements OnInit {
   question: any;
   index = 0;
   score = 0;
+  isAnswered = false;
 
   constructor(private quizService: QuizService) { }
 
@@ -32,11 +33,21 @@ export class QuizComponent implements OnInit {
     if (rightAsnwer) {
       this.score++;
     }
-    setTimeout(this.nextQuestion.bind(this), 2000);
+    setTimeout(this.questionExplonationJumper.bind(this), 2000);
+
   }
 
   nextQuestion(): void {
     this.index++;
     this.question = this.questions[this.index];
+    this.questionExplonationJumper();
+  }
+
+  questionExplonationJumper() {
+    this.isAnswered = !this.isAnswered;
+  }
+
+  getExplonation(): void {
+    return this.questions[this.index].explonation;
   }
 }

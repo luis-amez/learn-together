@@ -1,1 +1,8 @@
-<app-question [question]="question" (selected)="onSelected($event)"></app-question>
+<div *ngIf="!isAnswered">
+    <app-question [question]="question" (selected)="onSelected($event)"></app-question>
+</div>
+
+<div *ngIf="isAnswered">
+    <app-explo-screen [explonation]="getExplonation()" (mouseClick)="nextQuestion()" ></app-explo-screen>
+</div>
+
