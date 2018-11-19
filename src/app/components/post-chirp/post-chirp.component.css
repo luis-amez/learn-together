@@ -37,3 +37,7 @@ form .validation {
 form .field.has-error input {
 	border: 1px solid  red;
 }
+
+textarea {
+  resize: none;
+}
