@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 
+import { ChirpService } from '../../services/chirp.service';
+
 @Component({
   selector: 'app-chirp',
   templateUrl: './chirp.component.html',
@@ -9,9 +11,15 @@ export class ChirpComponent implements OnInit {
 
   @Input() chirp: any;
 
-  constructor() { }
+  constructor(private chirpService: ChirpService) { }
 
   ngOnInit() {
   }
 
+  shareChirp() {
+    this.chirpService.shareChirp(this.chirp._id)
+      .then(data => {
+        // Update display
+      });
+  }
 }

@@ -18,11 +18,19 @@ export class ChirpService {
       .toPromise();
   }
 
-  postChirp(chirp): Promise<any> {
+  postChirp(chirpContent): Promise<any> {
     const options = {
       withCredentials: true
     };
-    return this.httpClient.post(`${environment.apiUrl}/chirps`, chirp, options)
+    return this.httpClient.post(`${environment.apiUrl}/chirps`, chirpContent, options)
+      .toPromise();
+  }
+
+  shareChirp(chirpId): Promise<any> {
+    const options = {
+      withCredentials: true
+    };
+    return this.httpClient.put(`${environment.apiUrl}/chirps/share`, { chirpId }, options)
       .toPromise();
   }
 }
