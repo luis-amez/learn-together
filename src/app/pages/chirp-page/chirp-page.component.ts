@@ -24,4 +24,10 @@ export class ChirpPageComponent implements OnInit {
       });
   }
 
+  onChirped(content: string) {
+    this.chirpService.postChirp({content})
+      .then((data) => {
+        this.getChirps();
+      });
+  }
 }

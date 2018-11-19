@@ -12,6 +12,7 @@ import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { ChirpPageComponent } from './pages/chirp-page/chirp-page.component';
 import { ChirpComponent } from './components/chirp/chirp.component';
 import { MainPageComponent } from './pages/main-page/main-page.component';
+import { PostChirpComponent } from './components/post-chirp/post-chirp.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { MainPageComponent } from './pages/main-page/main-page.component';
     LoginPageComponent,
     ChirpPageComponent,
     ChirpComponent,
-    MainPageComponent
+    MainPageComponent,
+    PostChirpComponent
   ],
   imports: [
     BrowserModule,
