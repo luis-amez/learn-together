@@ -29,7 +29,16 @@ export class QuizComponent implements OnInit {
       .then(data => {
         this.questions = data;
         this.question = this.questions[0];
+        this.reInitialize();
       });
+  }
+
+  reInitialize(): void {
+    this.index = 0;
+    this.score = 0;
+    this.isAnswered = false;
+    this.isUserCurious = false;
+    this.switchButtonText();
   }
 
   onSelected(rightAsnwer: boolean) {
