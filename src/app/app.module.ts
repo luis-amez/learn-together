@@ -9,13 +9,15 @@ import { QuizComponent } from './pages/quiz/quiz.component';
 import { QuizService } from './services/quiz.service';
 import { QuestionComponent } from './components/question/question.component';
 import { ExploScreenComponent } from './pages/explo-screen/explo-screen.component';
+import { QuizEndscreenComponent } from './pages/quiz-endscreen/quiz-endscreen.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     QuizComponent,
     QuestionComponent,
-    ExploScreenComponent
+    ExploScreenComponent,
+    QuizEndscreenComponent
   ],
   imports: [
     BrowserModule,
