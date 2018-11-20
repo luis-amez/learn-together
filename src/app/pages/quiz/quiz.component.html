@@ -1,8 +1,12 @@
-<div *ngIf="!isAnswered">
+<div *ngIf="!isUserCurious"> <!--remove isanswered-->
     <app-question [question]="question" (selected)="onSelected($event)"></app-question>
 </div>
 
-<div *ngIf="isAnswered">
+<div *ngIf="isUserCurious">
     <app-explo-screen [explonation]="getExplonation()" (mouseClick)="nextQuestion()" ></app-explo-screen>
 </div>
 
+<div *ngIf="isAnswered && !isUserCurious">
+    <button class="button" (click)="showExplonations()">Learn Why</button>
+    <button class="button" (click)="nextQuestion()">Next Question</button>
+</div>

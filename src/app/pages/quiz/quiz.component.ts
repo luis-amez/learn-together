@@ -14,6 +14,7 @@ export class QuizComponent implements OnInit {
   index = 0;
   score = 0;
   isAnswered = false;
+  isUserCurious = false;
 
   constructor(private quizService: QuizService) { }
 
@@ -33,7 +34,7 @@ export class QuizComponent implements OnInit {
     if (rightAsnwer) {
       this.score++;
     }
-    setTimeout(this.questionExplonationJumper.bind(this), 2000);
+    setTimeout(this.questionExplonationJumper.bind(this), 1000);
 
   }
 
@@ -41,10 +42,15 @@ export class QuizComponent implements OnInit {
     this.index++;
     this.question = this.questions[this.index];
     this.questionExplonationJumper();
+    this.isUserCurious = false;;
   }
 
   questionExplonationJumper() {
     this.isAnswered = !this.isAnswered;
+  }
+
+  showExplonations() {
+    this.isUserCurious = !this.isUserCurious;
   }
 
   getExplonation(): void {
