@@ -10,3 +10,10 @@
     <button class="button" (click)="showExplonations()">Learn Why</button>
     <button class="button" (click)="nextQuestion()">Next Question</button>
 </div>
+
+<div *ngIf="wasTheLastQuestion()">
+    <app-quiz-endscreen></app-quiz-endscreen>
+</div>
+
+<!--wasTheLastQuestion
+(mouseClick)="getQuestions()"-->

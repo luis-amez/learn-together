@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-quiz-endscreen',
@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class QuizEndscreenComponent implements OnInit {
 
+  @Output() mouseClick = new EventEmitter<boolean>();;
+
   constructor() { }
 
   ngOnInit() {
   }
 
+  resetQuiz() {
+    this.mouseClick.emit(true);
+  }
 }

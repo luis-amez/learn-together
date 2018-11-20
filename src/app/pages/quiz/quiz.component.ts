@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { QuizService } from '../../services/quiz.service';
+import { template } from '@angular/core/src/render3';
 
 @Component({
   selector: 'app-quiz',
@@ -45,15 +46,23 @@ export class QuizComponent implements OnInit {
     this.isUserCurious = false;;
   }
 
-  questionExplonationJumper() {
+  questionExplonationJumper(): void {
     this.isAnswered = !this.isAnswered;
   }
 
-  showExplonations() {
+  showExplonations(): void {
     this.isUserCurious = !this.isUserCurious;
   }
 
   getExplonation(): void {
     return this.questions[this.index].explonation;
+  }
+
+  wasTheLastQuestion(): boolean {
+    if(this.questions && this.index  == this.questions.length) {
+      return true;
+    }else{
+      return false;
+    }
   }
 }
