@@ -16,6 +16,7 @@ export class QuizComponent implements OnInit {
   score = 0;
   isAnswered = false;
   isUserCurious = false;
+  continueButtonText = "Next Question";
 
   constructor(private quizService: QuizService) { }
 
@@ -43,7 +44,8 @@ export class QuizComponent implements OnInit {
     this.index++;
     this.question = this.questions[this.index];
     this.questionExplonationJumper();
-    this.isUserCurious = false;;
+    this.isUserCurious = false;
+    this.switchButtonText();
   }
 
   questionExplonationJumper(): void {
@@ -65,4 +67,12 @@ export class QuizComponent implements OnInit {
       return false;
     }
   }
+
+  switchButtonText(): void {
+    if(this.questions && this.index + 1 == this.questions.length) {
+      this.continueButtonText = "See Results";
+    }else{
+      this.continueButtonText = "Next Question";
+    }
+  } 
 }

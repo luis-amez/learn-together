@@ -8,7 +8,7 @@
 
 <div *ngIf="isAnswered && !isUserCurious">
     <button class="button" (click)="showExplonations()">Learn Why</button>
-    <button class="button" (click)="nextQuestion()">Next Question</button>
+    <button class="button" (click)="nextQuestion()">{{continueButtonText}}</button>
 </div>
 
 <div *ngIf="wasTheLastQuestion()">
