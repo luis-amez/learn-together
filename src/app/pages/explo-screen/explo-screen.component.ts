@@ -8,6 +8,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 export class ExploScreenComponent implements OnInit {
 
   @Input() explonation: string;
+  @Input() continueButtonText: string;
   @Output() mouseClick = new EventEmitter<boolean>();
 
 
