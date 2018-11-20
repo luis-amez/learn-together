@@ -13,6 +13,8 @@ export class ChirpComponent implements OnInit {
   @Input() username: String;
   sharesLength: Number;
   user: String;
+  stats: any;
+  isStatisticVisible = false;
 
   constructor(private chirpService: ChirpService) { }
 
@@ -31,6 +33,14 @@ export class ChirpComponent implements OnInit {
     this.chirpService.deleteChirp(this.chirp._id)
       .then(data => {
         this.chirp.deleteDate = data.deleteDate;
+      });
+  }
+
+  showStats() {
+    this.isStatisticVisible = !this.isStatisticVisible;
+    this.chirpService.getStats(this.chirp._id)
+      .then(data => {
+        this.stats = data;
       });
   }
 }
