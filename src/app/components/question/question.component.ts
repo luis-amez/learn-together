@@ -43,6 +43,12 @@ export class QuestionComponent implements OnInit, OnChanges {
     if (option === this.question.correctAnswer) {
       return 'right-answer';
     }
+    console.log(this.question.gifImage);
+
     return this.currentOption ===  option ? this.style : 'default';
+  }
+
+  getGifURL() {
+    return this.question.gifImage;
   }
 }
