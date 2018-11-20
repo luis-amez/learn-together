@@ -33,4 +33,12 @@ export class ChirpService {
     return this.httpClient.put(`${environment.apiUrl}/chirps/share`, { chirpId }, options)
       .toPromise();
   }
+
+  deleteChirp(chirpId): Promise<any> {
+    const options = {
+      withCredentials: true
+    };
+    return this.httpClient.put(`${environment.apiUrl}/chirps/delete`, { chirpId }, options)
+      .toPromise();
+  }
 }

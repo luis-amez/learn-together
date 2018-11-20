@@ -1,4 +1,6 @@
 <p>{{chirp.content}}</p>
 <p>{{chirp.author.username}}</p>
-<p>{{ chirp.createdAt | date:'medium' }}</p>
+<p>{{chirp.createdAt | date:'medium'}}</p>
 <button (click)="shareChirp()">Share ({{sharesLength}})</button>
+<button *ngIf="!chirp.deleteDate && username === chirp.author.username" (click)="deleteChirp()">Delete</button>
+<p *ngIf="chirp.deleteDate">This chirp will be deleted on {{chirp.deleteDate | date}}</p>

@@ -10,7 +10,9 @@ import { ChirpService } from '../../services/chirp.service';
 export class ChirpComponent implements OnInit {
 
   @Input() chirp: any;
-  sharesLength: number;
+  @Input() username: String;
+  sharesLength: Number;
+  user: String;
 
   constructor(private chirpService: ChirpService) { }
 
@@ -22,6 +24,13 @@ export class ChirpComponent implements OnInit {
     this.chirpService.shareChirp(this.chirp._id)
       .then(data => {
         this.sharesLength = data.shares.length;
+      });
+  }
+
+  deleteChirp() {
+    this.chirpService.deleteChirp(this.chirp._id)
+      .then(data => {
+        this.chirp.deleteDate = data.deleteDate;
       });
   }
 }
