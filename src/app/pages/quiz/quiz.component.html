@@ -12,7 +12,7 @@
 </div>
 
 <div *ngIf="wasTheLastQuestion()">
-    <app-quiz-endscreen (mouseClick)="getQuestions()"></app-quiz-endscreen>
+    <app-quiz-endscreen [score]="score" (mouseClick)="getQuestions()"></app-quiz-endscreen>
 </div>
 
 <!--wasTheLastQuestion
