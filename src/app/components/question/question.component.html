@@ -1,5 +1,7 @@
 <img *ngIf="question" [src]="question?.gifImage">
 
+<div [innerHTML]="question?.question"></div>
+
 <ul>
   <li *ngFor="let option of question?.options" (click)="onOptionClicked(option)" [className]="isOptionClicked(option)">
     {{option}}
