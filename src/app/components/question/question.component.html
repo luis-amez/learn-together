@@ -1,9 +1,14 @@
-<img *ngIf="question" [src]="question?.gifImage">
+<div class="question">
+  <br>
+  <img *ngIf="question" [src]="question?.gifImage" class="gif-picture">
+  
+  <div [innerHTML]="question?.question"></div>
+  <div [innerHTML]="question?.bigQuestion" class="bigQuestion"></div>
+  
+  <ul class="list-of-answers">
+    <li *ngFor="let option of question?.options" (click)="onOptionClicked(option)" [className]="isOptionClicked(option)">
+      {{option}}
+    </li>
+  </ul>
 
-<div [innerHTML]="question?.question"></div>
-
-<ul>
-  <li *ngFor="let option of question?.options" (click)="onOptionClicked(option)" [className]="isOptionClicked(option)">
-    {{option}}
-  </li>
-</ul>
+</div>
