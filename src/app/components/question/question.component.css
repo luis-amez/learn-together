@@ -1,21 +1,21 @@
 .default {
   background-color: #70ABAF;
-  color: white;
+  color: #F0F7F4;
 }
 
 .right-answer {
   background-color: green;
-  color:white;
+  color: #F0F7F4;
 }
 
 .wrong-answer {
   background-color: red;
-  color:white;
+  color: #F0F7F4;
 }
 
 .active {
   background-color: orange;
-  color:white;
+  color: #F0F7F4;
 }
 
 .gif-picture {
@@ -33,7 +33,7 @@
 
 .question {
   font-size: 16px;
-  color: white;
+  color: #F0F7F4;
   font-family: 'Lato', sans-serif;
 }
 
@@ -42,6 +42,11 @@
   color: #99E1D9;
   font-family: Arial, Helvetica, sans-serif;
   margin: 15px;
+}
+
+.exercise-theme {
+  font-size: 16px;
+  color: #F0F7F4;
 }
 
 .list-of-answers li:nth-child(1) {
