@@ -21,3 +21,11 @@ button {
   padding: 5px;
   font-weight: bold;
 }
+
+p {
+  margin-bottom: 5px;
+}
+
+.metadata {
+  color: #70ABAF;
+}

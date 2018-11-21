@@ -1,7 +1,6 @@
 <div (click)="showStats()">
   <p>{{chirp.content}}</p>
-  <p>{{chirp.author.username}}</p>
-  <p>{{chirp.createdAt | date:'medium'}}</p>
+  <p class="metadata">By {{chirp.author.username}} on {{chirp.createdAt | date:'medium'}}</p>
 </div>
 <button (click)="shareChirp()">Share ({{sharesLength}})</button>
 <button *ngIf="!chirp.deleteDate && username === chirp.author.username" (click)="deleteChirp()">Delete</button>
