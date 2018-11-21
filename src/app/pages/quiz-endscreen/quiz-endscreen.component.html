@@ -1,5 +1,16 @@
-<p>
-  {{quizEndText}} {{score}}
-</p>
 
-<button class="button" (click)="resetQuiz()">Retry!</button>
+<h3 class="core-sentece-style">Well done</h3>
+
+<div id="end-text-mover">
+  <div class="usual-text-style" [innerHTML]="quizEndText"></div>
+  <p id="score-style">
+    {{score}}
+  </p>
+</div>
+
+
+<div id="container-explo-button">
+  <button class="quiz-button-style" id="end-move-button" (click)="resetQuiz()">Retry!</button>
+</div>
+
+

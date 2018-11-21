@@ -1,0 +1,56 @@
+.core-sentece-style {
+    font-size: 120px;
+    text-align: center;
+    color: #99E1D9;
+    font-family: 'Grand Hotel', cursive;
+}
+
+.usual-text-style {
+    font-size: 16px;
+    color: #F0F7F4;
+    position: absolute;
+    width: 500px;
+    height: auto;
+    position: absolute;
+    left: -250px;
+}
+
+.quiz-button-style {
+    padding: 5;
+    width: 100px;
+    height: 30px;
+}
+
+#score-style {
+    margin: 5px;
+    font-size: 50px;
+    color: rgb(148, 2, 2);
+    float: none;
+    position: absolute;
+    left: -14px;
+    top: 100px;
+    text-shadow:
+    -1px -1px 0 rgb(98, 1, 1),
+    1px -1px 0  rgb(98, 1, 1),
+    -1px 1px 0  rgb(98, 1, 1),
+    1px 1px 0  rgb(98, 1, 1);  
+}
+
+#end-text-mover {
+    margin: 10px;
+    position: absolute;
+    left: 50%;
+    top: 40%;
+}
+
+#container-explo-button {
+    position: absolute;
+    margin: 5px;
+    left: 50%;
+    top: 70%;
+}
+
+#end-move-button {
+    position: absolute;
+    left: -42px;
+}

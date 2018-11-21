@@ -1,4 +1,4 @@
-<div>
+<div class = "quiz-page">
     <h1 class="big-title">Learn Together</h1>
 
     <div *ngIf="!isUserCurious"> <!--remove isanswered-->
@@ -9,9 +9,9 @@
         <app-explo-screen [explonation]="getExplonation()" [continueButtonText]="continueButtonText" (mouseClick)="nextQuestion()" ></app-explo-screen>
     </div>
     
-    <div *ngIf="isAnswered && !isUserCurious" id="buttons">
-        <button (click)="showExplonations()">Learn Why</button>
-        <button (click)="nextQuestion()">{{continueButtonText}}</button>
+    <div *ngIf="isAnswered && !isUserCurious" class="quiz-buttons-box">
+        <button (click)="showExplonations()" class="quiz-button-style" id="q-button-1">Learn Why</button>
+        <button (click)="nextQuestion()" class="quiz-button-style" id="q-button-2">{{continueButtonText}}</button>
     </div>
     
     <div *ngIf="wasTheLastQuestion()">

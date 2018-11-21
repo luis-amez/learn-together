@@ -2,7 +2,7 @@
   <br>
   <img *ngIf="question" [src]="question?.gifImage" class="gif-picture">
   
-  <div [innerHTML]="question?.question"></div>
+  <div [innerHTML]="question?.question" class="exercise-theme"></div>
   <div [innerHTML]="question?.bigQuestion" class="bigQuestion"></div>
   
   <ul class="list-of-answers">
