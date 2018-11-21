@@ -29,3 +29,14 @@ p {
 .metadata {
   color: #70ABAF;
 }
+
+.action-buttons {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+
+.action-buttons p {
+  margin-left: 10px;
+}
