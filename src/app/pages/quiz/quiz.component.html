@@ -1,7 +1,5 @@
-<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet"> 
-
-<div class="constant-Background">
-    Learn Together
+<div>
+    <h1 class="big-title">Learn Together</h1>
 
     <div *ngIf="!isUserCurious"> <!--remove isanswered-->
         <app-question [question]="question" (selected)="onSelected($event)"></app-question>

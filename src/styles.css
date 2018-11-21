@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0px;
+  padding: 0px;
+  background-color: #32292F;
+  color: #99E1E9;
+}
+
+.big-title {
+  text-align: center;
+  font-size: 45px;
+  font-family: 'Pacifico', cursive;
+}
