@@ -1,1 +1,25 @@
-<app-question [question]="question" (selected)="onSelected($event)"></app-question>
+<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet"> 
+
+<div class="constant-Background">
+    Learn Together
+
+    <div *ngIf="!isUserCurious"> <!--remove isanswered-->
+        <app-question [question]="question" (selected)="onSelected($event)"></app-question>
+    </div>
+    
+    <div *ngIf="isUserCurious">
+        <app-explo-screen [explonation]="getExplonation()" [continueButtonText]="continueButtonText" (mouseClick)="nextQuestion()" ></app-explo-screen>
+    </div>
+    
+    <div *ngIf="isAnswered && !isUserCurious" id="buttons">
+        <button (click)="showExplonations()">Learn Why</button>
+        <button (click)="nextQuestion()">{{continueButtonText}}</button>
+    </div>
+    
+    <div *ngIf="wasTheLastQuestion()">
+        <app-quiz-endscreen [score]="score" (mouseClick)="getQuestions()"></app-quiz-endscreen>
+    </div>
+
+</div>
+<!--wasTheLastQuestion
+(mouseClick)="getQuestions()"-->

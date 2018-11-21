@@ -14,6 +14,8 @@ import { ChirpComponent } from './components/chirp/chirp.component';
 import { MainPageComponent } from './pages/main-page/main-page.component';
 import { PostChirpComponent } from './components/post-chirp/post-chirp.component';
 import { StatsComponent } from './components/stats/stats.component';
+import { ExploScreenComponent } from './pages/explo-screen/explo-screen.component';
+import { QuizEndscreenComponent } from './pages/quiz-endscreen/quiz-endscreen.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { StatsComponent } from './components/stats/stats.component';
     ChirpComponent,
     MainPageComponent,
     PostChirpComponent,
-    StatsComponent
+    StatsComponent,
+    ExploScreenComponent,
+    QuizEndscreenComponent
   ],
   imports: [
     BrowserModule,
