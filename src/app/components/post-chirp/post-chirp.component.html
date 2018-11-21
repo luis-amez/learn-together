@@ -1,7 +1,6 @@
 <form (ngSubmit)="submitForm(form)" #form="ngForm" novalidate>
 
   <div class="field" [ngClass]="{'has-error': feedbackEnabled && chirpContentField.errors}">
-    <label>Share your thoughts:</label>
     <textarea rows="4" cols="50" type="textarea" name="chirpContent" [(ngModel)]="chirpContent" #chirpContentField="ngModel" required maxlength="255"></textarea>
     <div *ngIf="feedbackEnabled && chirpContentField.errors">
       <p *ngIf="chirpContentField.errors.required" class="validation">Don't be shy, write something!</p>

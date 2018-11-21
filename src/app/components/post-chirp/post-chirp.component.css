@@ -1,5 +1,19 @@
+:host {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+* {
+  color: #FFF;
+}
+
+form {
+  display: flex;
+}
+
 form .field {
-	margin-bottom: 20px;
+  margin: 20px;
 }
 
 form label {
@@ -21,8 +35,12 @@ form .submit button {
   padding: 5px 20px;
   text-align: center;
   font-size: 16px;
-  background-color: cyan;
+  background-color: #70ABAF;
   cursor: pointer;
+  -moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+  border-radius: 5px;
+  font-weight: bold;
 }
 
 form .field.has-error label {
@@ -40,4 +58,7 @@ form .field.has-error input {
 
 textarea {
   resize: none;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
 }

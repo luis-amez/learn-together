@@ -1,2 +1,5 @@
-<app-post-chirp (content)="onChirped($event)"></app-post-chirp>
-<app-chirp *ngFor="let chirp of chirps" [chirp]="chirp" [username]="username"></app-chirp>
+<div class="container">
+  <h1 class="big-title">Share your thoughts!</h1>
+  <app-post-chirp (content)="onChirped($event)"></app-post-chirp>
+  <app-chirp *ngFor="let chirp of chirps" [chirp]="chirp" [username]="username"></app-chirp>
+</div>
