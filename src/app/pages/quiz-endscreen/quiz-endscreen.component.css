@@ -24,16 +24,16 @@
 #score-style {
     margin: 5px;
     font-size: 50px;
-    color: rgb(108, 2, 2);
+    color: rgb(148, 2, 2);
     float: none;
     position: absolute;
     left: -14px;
     top: 100px;
     text-shadow:
-    -1px -1px 0 rgb(78, 1, 1),
-    1px -1px 0  rgb(78, 1, 1),
-    -1px 1px 0  rgb(78, 1, 1),
-    1px 1px 0  rgb(78, 1, 1);  
+    -1px -1px 0 rgb(98, 1, 1),
+    1px -1px 0  rgb(98, 1, 1),
+    -1px 1px 0  rgb(98, 1, 1),
+    1px 1px 0  rgb(98, 1, 1);  
 }
 
 #end-text-mover {

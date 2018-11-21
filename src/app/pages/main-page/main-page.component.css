@@ -1,0 +1,72 @@
+.quiz-button-style {
+    margin: 10px 0px;
+    padding: 5;
+    width: 100px;
+    height: 30px;
+}
+
+.core-sentece-style-main {
+    font-size: 110px;
+    text-align: center;
+    color: #99E1D9;
+    font-family: 'Grand Hotel', cursive;
+    width: 800px;
+    height: auto;
+    position: absolute;
+    left: -400px;
+}
+
+.main-title {
+    text-align: center;
+    font-size: 45px;
+    font-family: 'Pacifico', cursive;
+}
+
+#main-txt-container {
+    margin: 10px;
+    position: absolute;
+    left: 50%;
+}
+
+#nav-bar-mover {
+    margin: 5px;
+    position: absolute;
+    left: 50%;
+    top: 70%;
+}
+
+.features-list {
+    list-style: none;
+    font-size: 20px;
+    font-weight: 200;
+}
+
+.features-list li:nth-child(1) {
+    /* display: inline; */
+    width: 200px;
+    float: none;
+    position: absolute;
+    left: -125px;
+    top: 0px;
+    
+}
+
+.features-list li:nth-child(2) {
+    /* display: inline; */
+    width: 200px;
+    height: 50px;
+    float: none;
+    position: absolute;
+    left: 25px;
+}
+
+.features-list a {
+    text-decoration: none;
+}
+
+#logout-mover {
+    margin: 5px;
+    position: absolute;
+    left: -50px;
+    top: 100px;
+}
