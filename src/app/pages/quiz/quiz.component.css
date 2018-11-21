@@ -1,19 +1,8 @@
-/* * {
-    margin: 0;
-    padding: 0;
-}
-
-.constant-Background {
-    width: 100vw;
-    height: 100vh;
-    margin: -8px;
-    padding: 0px;
-    font-size: 45px;
+.quiz-page {
     background-color: #32292F;
     color: #99E1E9;
-    font-family: 'Pacifico', cursive;
     text-align: center;
-} */
+}
 
 #buttons {
     padding: 0;
