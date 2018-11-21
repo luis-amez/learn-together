@@ -1,6 +1,15 @@
-<p>
-  {{explonation}}
+<link href="https://fonts.googleapis.com/css?family=Grand+Hotel" rel="stylesheet"> 
 
-</p>
+<h2 id="explo-title">Here is why...</h2>
 
-<button class="button" (click)="goToNextQuestion()">{{continueButtonText}}</button>
+<div id="explo-text-container">
+  <p id="explo-text">
+    {{explonation}}
+  </p>
+</div>
+
+
+<div id="container-explo-button">
+  <button class="quiz-button-style" id="move-button" (click)="goToNextQuestion()">{{continueButtonText}}</button>
+</div>
+
